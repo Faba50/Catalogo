@@ -6,6 +6,7 @@ from db_users import usuarios
 from grafo import grafo,generar_recomendaciones,dfs,bfs
 from Heap import top
 from registro import registrar
+from wachlist import wachlist
 session_usuario = None
 background_image_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxtj1-R7lh9ziN4YCJsV0gMPRVdg7gie9Mg&s"
 
@@ -26,6 +27,14 @@ def top5():
 @ui.page('/registro')
 def registro():
     registrar()
+
+@ui.page('/wach')
+def ver_mas_tarde():
+    wachlist()
+
+
+
+
 
 @ui.page('/')
 def logeando():
